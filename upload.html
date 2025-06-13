@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Jurnal - JurnalShare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Jurnal<span>Share</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="jurnal.html">Jurnal</a></li>
+                    <li><a href="#" class="active">Upload</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons" id="authButtons">
+                <button class="btn-login">Masuk</button>
+                <button class="btn-register">Daftar</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt">
+        <section class="upload-section">
+            <h2>Upload Jurnal Baru</h2>
+            <p>Bagikan penelitian Anda dengan komunitas akademik</p>
+
+            <form id="uploadForm" class="upload-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="judul">Judul Jurnal*</label>
+                    <input type="text" id="judul" name="judul" required
+                        placeholder="Contoh: Analisis Algoritma Machine Learning">
+                </div>
+
+                <div class="form-group">
+                    <label for="penulis">Penulis*</label>
+                    <input type="text" id="penulis" name="penulis" required placeholder="Nama penulis atau tim penulis">
+                </div>
+
+                <div class="form-group">
+                    <label for="abstrak">Abstrak*</label>
+                    <textarea id="abstrak" name="abstrak" rows="5" required
+                        placeholder="Ringkasan singkat tentang jurnal Anda"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="kategori">Kategori*</label>
+                    <select id="kategori" name="kategori" required>
+                        <option value="">Pilih Kategori</option>
+                        <option value="Teknologi Informasi">Teknologi Informasi</option>
+                        <option value="Kedokteran">Kedokteran</option>
+                        <option value="Ekonomi">Ekonomi</option>
+                        <option value="Teknik">Teknik</option>
+                        <option value="Sosial">Sosial</option>
+                        <option value="Pendidikan">Pendidikan</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="keywords">Kata Kunci</label>
+                    <input type="text" id="keywords" name="keywords"
+                        placeholder="Pisahkan dengan koma, contoh: machine learning, data mining">
+                </div>
+
+                <div class="form-group">
+                    <label for="tahun">Tahun Publikasi*</label>
+                    <input type="number" id="tahun" name="tahun" min="1900" max="2023" required>
+                </div>
+
+                <div class="form-group file-upload">
+                    <label for="fileJurnal">File Jurnal* (PDF/DOCX, max 10MB)</label>
+                    <div class="upload-area" id="uploadArea">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Seret file ke sini atau klik untuk memilih</p>
+                        <input type="file" id="fileJurnal" name="fileJurnal" accept=".pdf,.docx" required>
+                        <div class="file-info" id="fileInfo"></div>
+                        <div class="progress-bar" id="progressBar">
+                            <div class="progress" id="progress"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">Saya menyetujui bahwa jurnal ini adalah karya saya sendiri dan tidak melanggar
+                        hak cipta*</label>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn-primary">Upload Jurnal</button>
+                    <button type="reset" class="btn-secondary">Reset Form</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Jurnal<span>Share</span></h3>
+                    <p>Platform berbagi jurnal penelitian untuk kemajuan ilmu pengetahuan.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Tautan Cepat</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="#">Jurnal</a></li>
+                        <li><a href="upload.html">Upload</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <p><i class="fas fa-envelope"></i> info@jurnalshare.com</p>
+                    <p><i class="fas fa-phone"></i> +62 123 4567 890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 JurnalShare. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/upload.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

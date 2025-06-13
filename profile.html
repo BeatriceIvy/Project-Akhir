@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - JurnalShare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Jurnal<span>Share</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="#">Jurnal</a></li>
+                    <li><a href="upload.html">Upload</a></li>
+                    <li><a href="#">Tentang</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons" id="authButtons">
+                <!-- Diisi oleh JavaScript -->
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="profile-section">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="https://via.placeholder.com/150" alt="Avatar" id="userAvatar">
+                    <button class="btn-edit-avatar">Ubah Foto</button>
+                </div>
+                <div class="profile-info">
+                    <h2 id="userName">Nama Pengguna</h2>
+                    <p class="user-email" id="userEmail">email@example.com</p>
+                    <p class="user-joined" id="userJoined">Bergabung pada Januari 2023</p>
+                </div>
+            </div>
+
+            <div class="profile-tabs">
+                <button class="tab-btn active" data-tab="profile">Profil</button>
+                <button class="tab-btn" data-tab="journals">Jurnal Saya</button>
+                <button class="tab-btn" data-tab="activity">Aktivitas</button>
+            </div>
+
+            <div class="tab-content active" id="profileTab">
+                <form id="profileForm" class="profile-form">
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required readonly>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="institution">Institusi</label>
+                        <input type="text" id="institution" name="institution" placeholder="Universitas/Kampus/Perusahaan">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bio">Bio</label>
+                        <textarea id="bio" name="bio" rows="4" placeholder="Ceritakan sedikit tentang Anda"></textarea>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="submit" class="btn-primary">Simpan Perubahan</button>
+                    </div>
+                </form>
+
+                <div class="password-change">
+                    <h3>Ubah Password</h3>
+                    <form id="passwordForm">
+                        <div class="form-group">
+                            <label for="currentPassword">Password Saat Ini</label>
+                            <input type="password" id="currentPassword" name="currentPassword" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="newPassword">Password Baru</label>
+                            <input type="password" id="newPassword" name="newPassword" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmPassword">Konfirmasi Password Baru</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        </div>
+                        
+                        <div class="form-buttons">
+                            <button type="submit" class="btn-primary">Ubah Password</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="tab-content" id="journalsTab">
+                <div class="user-journals">
+                    <h3>Jurnal yang Diupload</h3>
+                    <div class="journal-list" id="userJournalList">
+                        <!-- Diisi oleh JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="activityTab">
+                <div class="user-activity">
+                    <h3>Aktivitas Terakhir</h3>
+                    <div class="activity-list" id="userActivityList">
+                        <!-- Diisi oleh JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer sama seperti sebelumnya -->
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

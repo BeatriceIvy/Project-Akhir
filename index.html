@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JurnalShare - Platform Berbagi Jurnal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Jurnal<span>Share</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Beranda</a></li>
+                    <li><a href="jurnal.html">Jurnal</a></li>
+                    <li><a href="upload.html">Upload</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons" id="authButtons">
+                <a href="login.html"><button class="btn-login">Masuk</button></a>
+                <button class="btn-register">Daftar</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Berbagi Pengetahuan Melalui Jurnal</h2>
+                <p>Temukan dan bagikan jurnal penelitian dengan komunitas akademik</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">Jelajahi Jurnal</button>
+                    <button class="btn-secondary">Upload Jurnal</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="image/img.jpg" alt="Ilustrasi Jurnal">
+            </div>
+        </section>
+
+        <section class="search-section">
+            <div class="search-box expanded">
+                <input type="text" id="searchInput" placeholder="Cari berdasarkan judul, penulis, atau kata kunci">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="advanced-filters">
+                <div class="filter-group">
+                    <label for="category">Kategori:</label>
+                    <select id="category">
+                        <option>Semua Kategori</option>
+                        <option>Teknologi Informasi</option>
+                        <option>Kedokteran</option>
+                        <option>Ekonomi</option>
+                        <option>Teknik</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select>
+                        <option>Terbaru</option>
+                        <option>Terpopuler</option>
+                        <option>Rating Tertinggi</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+        <div class="search-results" id="searchResults"></div>
+
+        <section class="journals">
+            <h2>Jurnal Terbaru</h2>
+            <div class="journal-grid">
+                <!-- Item Jurnal 1 -->
+                <div class="journal-card">
+                    <div class="journal-category">Teknologi Informasi</div>
+                    <h3>Analisis Algoritma Machine Learning untuk Deteksi Penyakit</h3>
+                    <p class="journal-author">Oleh: Ahmad Fauzi</p>
+                    <p class="journal-date">12 Juni 2023</p>
+                    <div class="journal-stats">
+                        <span><i class="fas fa-download"></i> 124</span>
+                        <span><i class="fas fa-star"></i> 4.8</span>
+                    </div>
+                    <button class="btn-download">Download</button>
+                </div>
+
+                <!-- Item Jurnal 2 -->
+                <div class="journal-card">
+                    <div class="journal-category">Kedokteran</div>
+                    <h3>Dampak Polusi Udara terhadap Kesehatan Paru-paru</h3>
+                    <p class="journal-author">Oleh: Siti Rahayu</p>
+                    <p class="journal-date">5 Juni 2023</p>
+                    <div class="journal-stats">
+                        <span><i class="fas fa-download"></i> 89</span>
+                        <span><i class="fas fa-star"></i> 4.5</span>
+                    </div>
+                    <button class="btn-download">Download</button>
+                </div>
+
+                <!-- Item Jurnal 3 -->
+                <div class="journal-card">
+                    <div class="journal-category">Ekonomi</div>
+                    <h3>Pengaruh Digitalisasi terhadap UMKM di Era Pandemi</h3>
+                    <p class="journal-author">Oleh: Budi Santoso</p>
+                    <p class="journal-date">1 Juni 2023</p>
+                    <div class="journal-stats">
+                        <span><i class="fas fa-download"></i> 76</span>
+                        <span><i class="fas fa-star"></i> 4.2</span>
+                    </div>
+                    <button class="btn-download">Download</button>
+                </div>
+
+                <!-- Item Jurnal 4 -->
+                <div class="journal-card">
+                    <div class="journal-category">Pendidikan</div>
+                    <h3>Model Pembelajaran Hybrid Pasca Pandemi untuk Pendidikan Tinggi</h3>
+                    <p class="journal-author">Oleh: Dian Pertiwi</p>
+                    <p class="journal-abstract">Evaluasi efektivitas model pembelajaran hybrid dalam meningkatkan hasil
+                        belajar mahasiswa di 10 universitas negeri...</p>
+                    <p class="journal-date">28 Mei 2023</p>
+                    <div class="journal-stats">
+                        <span><i class="fas fa-download"></i> 65</span>
+                        <span><i class="fas fa-eye"></i> 189</span>
+                        <span><i class="fas fa-star"></i> 4.0</span>
+                    </div>
+                    <button class="btn-download">Download</button>
+                    <button class="btn-detail">Detail</button>
+                </div>
+            </div>
+
+            <button class="btn-view-all" onclick="location.href='jurnal.html'">Lihat Semua Jurnal</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Jurnal<span>Share</span></h3>
+                    <p>Platform berbagi jurnal penelitian untuk kemajuan ilmu pengetahuan.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Tautan Cepat</h4>
+                    <ul>
+                        <li><a href="#">Beranda</a></li>
+                        <li><a href="jurnal.html">Jurnal</a></li>
+                        <li><a href="upload.html">Upload</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <p><i class="fas fa-envelope"></i> info@jurnalshare.com</p>
+                    <p><i class="fas fa-phone"></i> +62 123 4567 890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 JurnalShare. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/search.js"></script>
+</body>
+
+</html>

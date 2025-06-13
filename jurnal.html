@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurnal - JurnalShare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Jurnal<span>Share</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="#" class="active">Jurnal</a></li>
+                    <li><a href="upload.html">Upload</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons" id="authButtons">
+                <a href="login.html"><button class="btn-login">Masuk</button></a>
+                <button class="btn-register">Daftar</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-header">
+            <h2>Daftar Jurnal</h2>
+            <p>Temukan jurnal penelitian dari berbagai disiplin ilmu</p>
+        </section>
+
+        <section class="search-section">
+            <div class="search-box expanded">
+                <input type="text" placeholder="Cari berdasarkan judul, penulis, atau kata kunci...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="advanced-filters">
+                <div class="filter-group">
+                    <label for="category">Kategori:</label>
+                    <select id="category">
+                        <option value="">Semua Kategori</option>
+                        <option value="technology">Teknologi Informasi</option>
+                        <option value="medicine">Kedokteran</option>
+                        <option value="economy">Ekonomi</option>
+                        <option value="engineering">Teknik</option>
+                        <option value="education">Pendidikan</option>
+                        <option value="social">Sosial Humaniora</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="year">Tahun:</label>
+                    <select id="year">
+                        <option value="">Semua Tahun</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort">Urutkan:</label>
+                    <select id="sort">
+                        <option value="newest">Terbaru</option>
+                        <option value="popular">Terpopuler</option>
+                        <option value="rating">Rating Tertinggi</option>
+                        <option value="downloads">Unduhan Terbanyak</option>
+                    </select>
+                </div>
+                <button class="btn-filter">Terapkan Filter</button>
+            </div>
+        </section>
+
+        <section class="journals-list">
+            <div class="journal-grid expanded">
+                <!-- Item Jurnal 1 -->
+                <div class="journal-card">
+                    <div class="journal-category">Teknologi Informasi</div>
+                    <h3>Analisis Algoritma Machine Learning untuk Deteksi Penyakit</h3>
+                    <p class="journal-author">Oleh: Ahmad Fauzi</p>
+                    <p class="journal-abstract">Penelitian ini menganalisis efektivitas berbagai algoritma machine learning dalam mendeteksi penyakit berdasarkan data medis...</p>
+                    <p class="journal-date">12 Juni 2023</p>
+                    <div class="journal-stats">
+                        <span><i class="fas fa-download"></i> 124</span>
+                        <span><i class="fas fa-eye"></i> 356</span>
+                        <span><i class="fas fa-star"></i> 4.8</span>
+                    </div>
+                    <button class="btn-download">Download</button>
+                    <button class="btn-detail">Detail</button>
+                </div>
+                
+                <!-- Item Jurnal 2 -->
+                <div class="journal-card">
+                    <div class="journal-category">Kedokteran</div>
+                    <h3>Dampak Polusi Udara terhadap Kesehatan Paru-paru</h3>
+                    <p class="journal-author">Oleh: Siti Rahayu</p>
+                    <p class="journal-abstract">Studi longitudinal tentang hubungan antara tingkat polusi udara dan gangguan fungsi paru-paru pada populasi perkotaan...</p>
+                    <p class="journal-date">5 Juni 2023</p>
+                    <div class="journal-stats">
+                        <span><i class="fas fa-download"></i> 89</span>
+                        <span><i class="fas fa-eye"></i> 278</span>
+                        <span><i class="fas fa-star"></i> 4.5</span>
+                    </div>
+                    <button class="btn-download">Download</button>
+                    <button class="btn-detail">Detail</button>
+                </div>
+                
+                <!-- Item Jurnal 3 -->
+                <div class="journal-card">
+                    <div class="journal-category">Ekonomi</div>
+                    <h3>Pengaruh Digitalisasi terhadap UMKM di Era Pandemi</h3>
+                    <p class="journal-author">Oleh: Budi Santoso</p>
+                    <p class="journal-abstract">Analisis dampak transformasi digital pada kinerja UMKM selama pandemi COVID-19 dengan studi kasus di 5 kota besar Indonesia...</p>
+                    <p class="journal-date">1 Juni 2023</p>
+                    <div class="journal-stats">
+                        <span><i class="fas fa-download"></i> 76</span>
+                        <span><i class="fas fa-eye"></i> 201</span>
+                        <span><i class="fas fa-star"></i> 4.2</span>
+                    </div>
+                    <button class="btn-download">Download</button>
+                    <button class="btn-detail">Detail</button>
+                </div>
+
+                <!-- Item Jurnal 4 -->
+                <div class="journal-card">
+                    <div class="journal-category">Pendidikan</div>
+                    <h3>Model Pembelajaran Hybrid Pasca Pandemi untuk Pendidikan Tinggi</h3>
+                    <p class="journal-author">Oleh: Dian Pertiwi</p>
+                    <p class="journal-abstract">Evaluasi efektivitas model pembelajaran hybrid dalam meningkatkan hasil belajar mahasiswa di 10 universitas negeri...</p>
+                    <p class="journal-date">28 Mei 2023</p>
+                    <div class="journal-stats">
+                        <span><i class="fas fa-download"></i> 65</span>
+                        <span><i class="fas fa-eye"></i> 189</span>
+                        <span><i class="fas fa-star"></i> 4.0</span>
+                    </div>
+                    <button class="btn-download">Download</button>
+                    <button class="btn-detail">Detail</button>
+                </div>
+
+                <!-- Item Jurnal 5 -->
+                <div class="journal-card">
+                    <div class="journal-category">Teknik</div>
+                    <h3>Optimasi Desain Turbin Angin Skala Kecil untuk Daerah Pedesaan</h3>
+                    <p class="journal-author">Oleh: Rudi Hermawan</p>
+                    <p class="journal-abstract">Pengembangan model turbin angin efisien dengan biaya rendah untuk memenuhi kebutuhan energi listrik di daerah terpencil...</p>
+                    <p class="journal-date">22 Mei 2023</p>
+                    <div class="journal-stats">
+                        <span><i class="fas fa-download"></i> 58</span>
+                        <span><i class="fas fa-eye"></i> 167</span>
+                        <span><i class="fas fa-star"></i> 4.3</span>
+                    </div>
+                    <button class="btn-download">Download</button>
+                    <button class="btn-detail">Detail</button>
+                </div>
+
+                <!-- Item Jurnal 6 -->
+                <div class="journal-card">
+                    <div class="journal-category">Sosial Humaniora</div>
+                    <h3>Perubahan Pola Komunikasi Keluarga di Era Digital</h3>
+                    <p class="journal-author">Oleh: Linda Wati</p>
+                    <p class="journal-abstract">Studi kualitatif tentang transformasi interaksi keluarga dalam rumah tangga dengan adanya penetrasi teknologi digital...</p>
+                    <p class="journal-date">15 Mei 2023</p>
+                    <div class="journal-stats">
+                        <span><i class="fas fa-download"></i> 42</span>
+                        <span><i class="fas fa-eye"></i> 132</span>
+                        <span><i class="fas fa-star"></i> 3.9</span>
+                    </div>
+                    <button class="btn-download">Download</button>
+                    <button class="btn-detail">Detail</button>
+                </div>
+            </div>
+            
+            <div class="pagination">
+                <button class="btn-pagination active">1</button>
+                <button class="btn-pagination">2</button>
+                <button class="btn-pagination">3</button>
+                <span>...</span>
+                <button class="btn-pagination">10</button>
+                <button class="btn-next">Selanjutnya <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Jurnal<span>Share</span></h3>
+                    <p>Platform berbagi jurnal penelitian untuk kemajuan ilmu pengetahuan.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Tautan Cepat</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="#">Jurnal</a></li>
+                        <li><a href="upload.html">Upload</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <p><i class="fas fa-envelope"></i> info@jurnalshare.com</p>
+                    <p><i class="fas fa-phone"></i> +62 123 4567 890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 JurnalShare. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
